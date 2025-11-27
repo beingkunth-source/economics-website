@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Macroeconomics – OpenEconomy</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<header class="main-header">
+    <div class="logo">Open<span>Economy</span></div>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="macro.html" class="active">Macroeconomics</a>
+        <a href="micro.html">Microeconomics</a>
+        <a href="india.html">India</a>
+        <a href="world.html">World</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="resources.html">Resources</a>
+        <a href="about.html">About</a>
+    </nav>
+    <button id="themeToggle" class="btn-outline">Theme</button>
+</header>
+
+<section class="page-header">
+    <h1>Macroeconomics</h1>
+    <p>
+        Macroeconomics looks at the economy as a whole – total output, overall prices,
+        jobs, money and trade with the rest of the world.
+    </p>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Key Questions in Macroeconomics</h2>
+    <div class="cards-grid">
+        <article class="card">
+            <h3>Output and Growth</h3>
+            <p>
+                How much does an economy produce in a year? How fast is this output growing over time?
+                Gross Domestic Product (GDP) is the standard measure.
+            </p>
+        </article>
+        <article class="card">
+            <h3>Inflation</h3>
+            <p>
+                How quickly are prices rising on average? Moderate inflation is normal, but very
+                high or very low inflation can create problems.
+            </p>
+        </article>
+        <article class="card">
+            <h3>Unemployment</h3>
+            <p>
+                What share of people who want to work cannot find jobs? Unemployment shows whether
+                an economy is using its labour resources fully.
+            </p>
+        </article>
+    </div>
+</section>
+
+<section class="section light-bg">
+    <h2 class="section-title">Illustrative GDP Growth Chart</h2>
+    <p class="section-text">
+        The chart below shows a simple example of real GDP growth over time for a hypothetical economy.
+        It is not based on actual data but is meant to help visualise the idea of growth.
+    </p>
+    <div class="chart-container">
+        <canvas id="gdpChart" width="600" height="320"></canvas>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Policy Tools</h2>
+    <p class="section-text">
+        Macroeconomic policy uses two main sets of tools:
+    </p>
+    <ul class="bullet-list">
+        <li>
+            <strong>Fiscal policy</strong> – taxes and government spending decided by the government.
+        </li>
+        <li>
+            <strong>Monetary policy</strong> – control of money supply and interest rates, usually
+            carried out by the central bank.
+        </li>
+    </ul>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    var canvas = document.getElementById("gdpChart");
+    if (!canvas) return;
+    var ctx = canvas.getContext("2d");
+    new Chart(ctx, {
+        type: "line",
+        data: {
+            labels: ["Year 1", "Year 2", "Year 3", "Year 4", "Year 5"],
+            datasets: [{
+                label: "Real GDP (index, Year 1 = 100)",
+                data: [100, 104, 108, 112, 118],
+                tension: 0.25,
+                borderWidth: 2,
+                pointRadius: 3
+            }]
+        },
+        options: {
+            plugins: {
+                legend: { display: true }
+            },
+            scales: {
+                y: {
+                    beginAtZero: false
+                }
+            }
+        }
+    });
+});
+</script>
+
+<footer class="footer">
+    <p>© 2025 OpenEconomy – A simple educational economics website for all ages.</p>
+</footer>
+</body>
+</html>

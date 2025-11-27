@@ -1,0 +1,399 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #f4f5fb;
+    color: #111827;
+    line-height: 1.6;
+}
+
+/* Dark theme */
+body.dark {
+    background: #020617;
+    color: #e5e7eb;
+}
+
+body.dark .main-header {
+    background: #02101f;
+    border-bottom-color: #1f2937;
+}
+
+body.dark .card,
+body.dark .data-table,
+body.dark .glossary,
+body.dark .contact-form {
+    background: #020617;
+    border-color: #1f2937;
+}
+
+body.dark .footer {
+    background: #020617;
+    color: #9ca3af;
+}
+
+body.dark .light-bg {
+    background: #020617;
+}
+
+/* Header */
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 2rem;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.logo span {
+    color: #2563eb;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #374151;
+    font-size: 0.9rem;
+    padding: 0.35rem 0.9rem;
+    border-radius: 999px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.navbar a:hover {
+    background: #e5e7eb;
+}
+
+.navbar a.active {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary,
+.btn-outline {
+    border-radius: 999px;
+    padding: 0.55rem 1.2rem;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.btn-primary {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.btn-secondary {
+    background: #e5e7eb;
+    color: #111827;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid #9ca3af;
+    color: #374151;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-outline:hover {
+    opacity: 0.95;
+}
+
+/* Hero */
+.hero {
+    padding: 2.5rem 2rem 1.5rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    gap: 2rem;
+    align-items: center;
+}
+
+.hero-text h1 {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+.hero-text p {
+    max-width: 34rem;
+    margin-bottom: 1.2rem;
+    color: #4b5563;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.hero-media {
+    text-align: center;
+}
+
+.hero-image {
+    max-width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.15);
+}
+
+.image-credit-inline {
+    margin-top: 0.4rem;
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+/* Sections */
+.section {
+    padding: 2rem 2rem;
+}
+
+.light-bg {
+    background: #eef2ff;
+}
+
+.section-title {
+    font-size: 1.4rem;
+    margin-bottom: 0.7rem;
+}
+
+.section-text {
+    max-width: 44rem;
+    margin-bottom: 0.8rem;
+}
+
+/* Cards and layouts */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 1rem;
+    padding: 1rem;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 2px 4px rgba(15, 23, 42, 0.04);
+}
+
+.card h3 {
+    margin-bottom: 0.4rem;
+}
+
+.card-link {
+    display: inline-block;
+    margin-top: 0.55rem;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: #2563eb;
+}
+
+/* Lists */
+.bullet-list {
+    list-style: disc;
+    padding-left: 1.4rem;
+}
+
+.bullet-list li + li {
+    margin-top: 0.4rem;
+}
+
+.numbered-list {
+    list-style: decimal;
+    padding-left: 1.3rem;
+}
+
+.numbered-list li + li {
+    margin-top: 0.4rem;
+}
+
+/* Page header */
+.page-header {
+    padding: 2rem 2rem 1rem;
+}
+
+.page-header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.4rem;
+}
+
+.page-header p {
+    color: #4b5563;
+}
+
+/* Banner image */
+.banner-image-wrapper {
+    margin-top: 1rem;
+}
+
+.banner-image {
+    max-width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.15);
+}
+
+/* Chart container */
+.chart-container {
+    margin-top: 1rem;
+    max-width: 640px;
+}
+
+/* Diagram styles for micro page */
+.two-column {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.diagram {
+    border-radius: 0.9rem;
+    border: 1px dashed #9ca3af;
+    padding: 0.75rem;
+    background: #ffffff;
+}
+
+.diagram-title {
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+    color: #4b5563;
+}
+
+.axes {
+    position: relative;
+    height: 200px;
+    border-left: 2px solid #6b7280;
+    border-bottom: 2px solid #6b7280;
+    padding: 0.75rem;
+}
+
+.axis-y {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 0.75rem;
+}
+
+.axis-x {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 0.75rem;
+}
+
+.curve {
+    position: absolute;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.curve.demand {
+    right: 24%;
+    top: 18%;
+}
+
+.curve.supply {
+    left: 24%;
+    bottom: 18%;
+}
+
+.equilibrium {
+    position: absolute;
+    left: 45%;
+    top: 45%;
+    font-size: 0.8rem;
+}
+
+/* Glossary */
+.glossary {
+    background: #ffffff;
+    border-radius: 1rem;
+    border: 1px solid #e5e7eb;
+    padding: 1rem 1.2rem;
+}
+
+.glossary dt {
+    font-weight: 600;
+    margin-top: 0.7rem;
+}
+
+.glossary dd {
+    margin-left: 1rem;
+    margin-top: 0.2rem;
+    color: #4b5563;
+}
+
+/* Tables */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background: #ffffff;
+    border-radius: 0.9rem;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+}
+
+.data-table th,
+.data-table td {
+    padding: 0.7rem 0.9rem;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 0.9rem;
+}
+
+.data-table th {
+    background: #e5e7eb;
+    text-align: left;
+}
+
+.small-note {
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background: #111827;
+    color: #e5e7eb;
+    font-size: 0.85rem;
+    margin-top: 2rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 880px) {
+    .hero {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 2rem 1.25rem 1.25rem;
+    }
+    .section,
+    .page-header {
+        padding: 1.75rem 1.25rem;
+    }
+    .two-column {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}

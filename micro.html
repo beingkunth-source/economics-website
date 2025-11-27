@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Microeconomics – OpenEconomy</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<header class="main-header">
+    <div class="logo">Open<span>Economy</span></div>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="macro.html">Macroeconomics</a>
+        <a href="micro.html" class="active">Microeconomics</a>
+        <a href="india.html">India</a>
+        <a href="world.html">World</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="resources.html">Resources</a>
+        <a href="about.html">About</a>
+    </nav>
+    <button id="themeToggle" class="btn-outline">Theme</button>
+</header>
+
+<section class="page-header">
+    <h1>Microeconomics</h1>
+    <p>
+        Microeconomics focuses on individual decision-makers – households, firms and markets –
+        and explains how prices and quantities are determined.
+    </p>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Demand and Supply</h2>
+    <div class="two-column">
+        <div>
+            <p>
+                <strong>Demand</strong> describes how much of a good or service buyers are willing and able
+                to purchase at different prices, holding other things constant. A demand curve typically slopes
+                downward: as price falls, quantity demanded rises.
+            </p>
+            <p>
+                <strong>Supply</strong> describes how much producers are willing and able to sell at different
+                prices. A supply curve normally slopes upward: as price rises, quantity supplied increases.
+            </p>
+        </div>
+
+        <div class="diagram">
+            <div class="diagram-title">Stylised Demand–Supply Diagram</div>
+            <!-- Purely illustrative SVG diagram, drawn for this website -->
+            <svg viewBox="0 0 400 260" width="100%" height="220" aria-labelledby="ds-title ds-desc" class="ds-svg">
+                <title id="ds-title">Stylised Demand–Supply Diagram</title>
+                <desc id="ds-desc">
+                    Downward-sloping demand curve, upward-sloping supply curve and their intersection at equilibrium.
+                </desc>
+
+                <!-- Axes -->
+                <line x1="50" y1="20" x2="50" y2="220" stroke="#4b5563" stroke-width="2"/>
+                <line x1="50" y1="220" x2="360" y2="220" stroke="#4b5563" stroke-width="2"/>
+
+                <!-- Axis labels -->
+                <text x="20" y="25" font-size="11" fill="#111827">Price</text>
+                <text x="332" y="240" font-size="11" fill="#111827">Quantity</text>
+
+                <!-- Demand curve (downward) -->
+                <line x1="70" y1="40" x2="340" y2="210" stroke="#ef4444" stroke-width="2"/>
+                <text x="318" y="70" font-size="11" fill="#ef4444">D</text>
+
+                <!-- Supply curve (upward) -->
+                <line x1="70" y1="210" x2="340" y2="50" stroke="#22c55e" stroke-width="2"/>
+                <text x="318" y="195" font-size="11" fill="#22c55e">S</text>
+
+                <!-- Equilibrium point (approximate intersection) -->
+                <circle cx="205" cy="130" r="4" fill="#111827"/>
+                <text x="213" y="125" font-size="11" fill="#111827">E*</text>
+
+                <!-- Dashed reference lines from equilibrium -->
+                <line x1="205" y1="130" x2="205" y2="220"
+                      stroke="#6b7280" stroke-width="1" stroke-dasharray="4 4"/>
+                <line x1="50" y1="130" x2="205" y2="130"
+                      stroke="#6b7280" stroke-width="1" stroke-dasharray="4 4"/>
+
+                <!-- Price* and Quantity* labels -->
+                <text x="18" y="134" font-size="10" fill="#374151">P*</text>
+                <text x="198" y="235" font-size="10" fill="#374151">Q*</text>
+            </svg>
+        </div>
+    </div>
+</section>
+
+<section class="section light-bg">
+    <h2 class="section-title">Elasticity</h2>
+    <p class="section-text">
+        Elasticity measures how strongly one variable responds when another variable changes.
+        The most common concept is the price elasticity of demand, which indicates how sensitive
+        demand is to a change in price.
+    </p>
+    <ul class="bullet-list">
+        <li>
+            If a small price change leads to a large change in quantity demanded,
+            demand is said to be <strong>elastic</strong>.
+        </li>
+        <li>
+            If a large price change leads to only a small change in quantity demanded,
+            demand is <strong>inelastic</strong>.
+        </li>
+    </ul>
+</section>
+
+<footer class="footer">
+    <p>© 2025 OpenEconomy – A simple educational economics website for all ages.</p>
+</footer>
+</body>
+</html>

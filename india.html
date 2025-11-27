@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>India – OpenEconomy</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<header class="main-header">
+    <div class="logo">Open<span>Economy</span></div>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="macro.html">Macroeconomics</a>
+        <a href="micro.html">Microeconomics</a>
+        <a href="india.html" class="active">India</a>
+        <a href="world.html">World</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="resources.html">Resources</a>
+        <a href="about.html">About</a>
+    </nav>
+    <button id="themeToggle" class="btn-outline">Theme</button>
+</header>
+
+<section class="page-header">
+    <h1>India – Selected Economic Concepts</h1>
+    <p>
+        India is one of the largest and fastest-changing economies in the world. This page connects
+        core economic ideas with examples related to India.
+    </p>
+    <div class="banner-image-wrapper">
+        <img src="https://images.pexels.com/photos/164636/pexels-photo-164636.jpeg?auto=compress&cs=tinysrgb&w=1200"
+             alt="Close-up of Indian rupee banknote with Gandhi portrait"
+             class="banner-image">
+        <p class="image-credit-inline">
+            Photo by Pixabay – Pexels
+        </p>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Structure of the Economy</h2>
+    <div class="cards-grid">
+        <article class="card">
+            <h3>Primary Sector</h3>
+            <p>
+                Activities based on natural resources such as agriculture, forestry, fishing and mining.
+            </p>
+        </article>
+        <article class="card">
+            <h3>Secondary Sector</h3>
+            <p>
+                Manufacturing and industry, where raw materials are converted into finished goods.
+            </p>
+        </article>
+        <article class="card">
+            <h3>Tertiary Sector</h3>
+            <p>
+                Services such as trade, transport, finance, information technology, education
+                and health care.
+            </p>
+        </article>
+    </div>
+</section>
+
+<section class="section light-bg">
+    <h2 class="section-title">Illustrative Inflation Path</h2>
+    <p class="section-text">
+        The chart below presents a stylised example of annual inflation rates for an imaginary
+        version of the Indian economy. It is purely for illustration.
+    </p>
+    <div class="chart-container">
+        <canvas id="inflationChart" width="600" height="320"></canvas>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Useful Official Sources</h2>
+    <ul class="bullet-list">
+        <li>
+            <strong>Reserve Bank of India (RBI)</strong> – monetary policy, banking statistics and reports.
+        </li>
+        <li>
+            <strong>Ministry of Statistics and Programme Implementation (MoSPI)</strong> – GDP, prices,
+            employment and many other official data series.
+        </li>
+        <li>
+            <strong>Economic Survey of India</strong> – annual review of the economy published by
+            the Ministry of Finance.
+        </li>
+    </ul>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    var canvas = document.getElementById("inflationChart");
+    if (!canvas) return;
+    var ctx = canvas.getContext("2d");
+    new Chart(ctx, {
+        type: "bar",
+        data: {
+            labels: ["Year 1", "Year 2", "Year 3", "Year 4", "Year 5"],
+            datasets: [{
+                label: "Headline inflation (%, illustrative)",
+                data: [6.0, 4.8, 5.5, 4.2, 5.0],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            plugins: {
+                legend: { display: true }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+});
+</script>
+
+<footer class="footer">
+    <p>© 2025 OpenEconomy – A simple educational economics website for all ages.</p>
+</footer>
+</body>
+</html>
