@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>World Economy – OpenEconomy</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
@@ -17,12 +18,12 @@
         <a href="world.html" class="active">World</a>
         <a href="glossary.html">Glossary</a>
         <a href="resources.html">Resources</a>
+        <a href="news.html">Currency Converter</a>
         <a href="about.html">About</a>
     </nav>
-    <button id="themeToggle" class="btn-outline">Theme</button>
 </header>
 
-<section class="page-header">
+<section class="page-header reveal-up">
     <h1>World Economy – A Brief View</h1>
     <p>
         The world economy links countries through trade, finance, migration and technology.
@@ -30,7 +31,7 @@
     </p>
 </section>
 
-<section class="section">
+<section class="section reveal-up">
     <h2 class="section-title">Groups of Economies</h2>
     <div class="cards-grid">
         <article class="card">
@@ -55,13 +56,23 @@
     </div>
 </section>
 
-<section class="section light-bg">
+<section class="section light-bg reveal-up">
     <h2 class="section-title">Trade and Interdependence</h2>
     <p class="section-text">
         International trade allows economies to specialise in goods and services where they have
         a comparative advantage. At the same time, it creates interdependence: a shock in one
         part of the world can quickly influence prices, growth and jobs elsewhere.
     </p>
+</section>
+
+<section class="section reveal-up" id="worldNewsSection">
+    <h2 class="section-title">Latest World Economics News</h2>
+    <p class="section-text small-note" id="worldNewsStatus">
+        Loading the latest world economics news…
+    </p>
+    <div class="news-list" id="worldNewsList">
+        <!-- World economics news articles will be inserted here by script.js -->
+    </div>
 </section>
 
 <footer class="footer">
